@@ -1,0 +1,23 @@
+{
+  "name": "yukku.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "./node_modules/.bin/jekyll serve --livereload",
+    "build": "./node_modules/.bin/jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukku/yukku.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yukku/yukku.github.io/issues"
+  },
+  "homepage": "https://github.com/yukku/yukku.github.io#readme",
+  "devDependencies": {
+    "jekyll": "^3.0.0-beta1"
+  }
+}
