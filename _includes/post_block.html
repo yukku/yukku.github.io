@@ -1,8 +1,30 @@
-<!-- Renders post date, title, and snippet of text. -->
-<div class="py-2 mb-2 prose">
-  <h2 class="h1 lh-condensed col-9 mb-0">
-    <a class="link-primary" title="{{ post.url | prepend: site.baseurl }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-  </h2>
-  <a class="no-underline-hover h5 block py-1 mb-1" title="{{ post.url | prepend: site.baseurl }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%b %-d, %Y" }}</a>
-  <p>{{ post.content | strip_html | truncatewords:30 }}</p>
+<div class="post-block">
+    <div class="container">
+        <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <div class="post-date">
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            {{ post.date | date: date_format }}
+        </div>
+        <div class="post-summery">
+            {% assign foundImage = 0 %}
+                  {% assign images = post.content | split:"<img " %}
+                  {% for image in images %}
+                    {% if image contains 'src' %}
+
+                        {% if foundImage == 0 %}
+                            {% assign html = image | split:"/>" | first %}
+                            <img {{ html }} width="100%" />
+                            {% assign foundImage = 1 %}
+                        {% endif %}
+                    {% endif %}
+                  {% endfor %}
+
+            <p>{{ post.content | strip_html | truncatewords:100 }}</p>
+        </div>
+
+    </div>
+    <div class="container">
+
+    </div>
+
 </div>
