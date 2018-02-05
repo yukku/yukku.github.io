@@ -14,11 +14,11 @@ header {
 
 .title {
     color: #111;
-    text-transform: uppercase;
-    font-size: 1.2rem;
+    // text-transform: uppercase;
+    font-size: 2.2rem;
     line-height: 1;
-    font-weight: bold;
-    margin: 10px 0 20px;
+    // font-weight: bold;
+    margin: 10px 0 5px 0;
 
     @media(min-width: 640px) {
         // font-size: 2.2rem;
@@ -26,12 +26,19 @@ header {
     }
 }
 
+.description{
+    font-size: 0.8rem;
+    // font-weight: bold;
+
+    // text-transform: uppercase;
+
+    // font-weight: bold;
+
+}
 .divider{
     line-height: 1;
 
-    font-size: 1.8rem;
     padding: 0 5px;
-    font-weight: lighter;
 
 
 }
