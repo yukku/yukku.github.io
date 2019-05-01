@@ -3,11 +3,21 @@ layout: default
 ---
 
 <div>
-
-    {% if site.posts.size > 0 %}
-
     <ul class="section-list">
-
+      <div class="container">
+          
+          <div class="section">
+            Mapping taxonomies using word2vec and t-sne
+            <div>
+              - <a href="http://yukku.github.io/examples/word2vec-tsne/index.html">word2vec-tsne</a>
+            </div>
+          </div>
+         
+      </div>
+  </ul>
+    {% if site.posts.size > 0 %}
+    <ul class="section-list">
+        
         {% for post in site.posts %}
           {% include post_block.html %}
         {% endfor %}
